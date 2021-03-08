@@ -1,23 +1,24 @@
 # Pokémon list
 
-first check: 
+first check:
 
-* node 12.x >=
+- node 12.x >=
 
 install
 
- `npm i parcel-bundler -g`
-  
- `npm i --save` 
+`npm i parcel-bundler@1.12.3 -D`
 
+O PROJETO NÃO ESTÁ COMPILANDO COM A ULTIMA VERSÃO DO PARCECL BUNDLER - PRECISA SER A VERSÃO 1.12.3
 
- Start your project by running `npm run dev` in your terminal and navigate to
-  http://localhost:1234/ 
+`npm i --save`
 
- Api OPEN -> https://pokeapi.co/
+Start your project by running `npm run dev` in your terminal and navigate to
+http://localhost:1234/
 
- Project exemple  https://pokedex.org/  
+Api OPEN -> https://pokeapi.co/
 
-Tutorial base -> https://www.digitalocean.com/community/tutorials/js-axios-vanilla-js 
+Project exemple https://pokedex.org/
+
+Tutorial base -> https://www.digitalocean.com/community/tutorials/js-axios-vanilla-js
 
 Tutorial to use PokeAPI -> https://pokeapi-how.appspot.com/
