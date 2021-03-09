@@ -22,3 +22,13 @@ Project exemple https://pokedex.org/
 Tutorial base -> https://www.digitalocean.com/community/tutorials/js-axios-vanilla-js
 
 Tutorial to use PokeAPI -> https://pokeapi-how.appspot.com/
+
+### Frameworks 
+
+https://getbootstrap.com/docs/5.0/getting-started/introduction/ Bootstrap 
+
+https://api.jquery.com/ jquery 
+
+https://select2.org/ Select2 
+
+https://www.npmjs.com/package/regenerator-runtime regenerator-runtime
