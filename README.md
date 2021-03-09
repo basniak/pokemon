@@ -4,7 +4,7 @@ _ALUNOS: VINICIUS ALEXANDRE BASNIAK | YKARO JHONATAN SILVA ANDRADE_
 
 # Pokémon list
 
-link publicado: https://pokemon-94a97.web.app/
+link publicado firebase: https://pokemon-94a97.web.app/
 
 first check:
 
