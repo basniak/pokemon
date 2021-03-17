@@ -1,0 +1,1 @@
+{"version":3,"sources":["mediaquery.css"],"names":[],"mappings":"AAAA,yBACE,gBACE,UACF,CACF,CACA,MACE,WAAY,CACZ,WACF","file":"mediaquery.1002baf7.css","sourceRoot":"..","sourcesContent":["@media (max-width: 504px) {\r\n  .card.col-sm-12 {\r\n    width: 100%;\r\n  }\r\n}\r\n.card {\r\n  width: 13rem;\r\n  margin: 10px;\r\n}\r\n"]}
