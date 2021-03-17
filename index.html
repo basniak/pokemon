@@ -10,17 +10,34 @@
   <script src="https://unpkg.com/regenerator-runtime@0.13.1/runtime.js"></script>
   <link rel="shortcut icon" href="imagens/pokebola.png" />
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="mediaquery.css" rel="stylesheet" />
+
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <title>Pokémon List</title>
 </head>
 
 <body>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Lista de Pokémon</a>
+        <a class="navbar-brand">Lista de Pokémon</a>
+        <form class="d-flex" id="busca_nome">
+          <input required class="form-control me-2" type="text" placeholder="Buscar" aria-label="Busca" id="entrada_nome">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
       </div>
     </nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Lista de Pokémon</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca por nome</button>
+          </form>
+        </div>
+      </div>
+    </nav> -->
   </div>
   <div class="container">
     <div class="row justify-content-start">

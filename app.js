@@ -52,7 +52,7 @@ const setLink = (link) => {
 
 const setTotal = (t) => {
   $("#total-pokemon").text(
-    `Pagina ${pag} de ${max_pag} | Total de Pokémons: ${t}`
+    `Pagina ${pag} de ${max_pag} | Total de Pokémons: ${t}`,
   );
 };
 const setProximo = () => {
@@ -74,7 +74,7 @@ const clickProximo = () => {
     event.preventDefault();
     if (proximo) {
       const urlParams = new URLSearchParams(
-        proximo.replace(`${BASE_URL}/pokemon?`, "")
+        proximo.replace(`${BASE_URL}/pokemon?`, ""),
       );
       pag++;
       offset = urlParams.get("offset");
@@ -90,7 +90,7 @@ const clickAnterior = () => {
     event.preventDefault();
     if (anterior) {
       const urlParams = new URLSearchParams(
-        anterior.replace(`${BASE_URL}/pokemon?`, "")
+        anterior.replace(`${BASE_URL}/pokemon?`, ""),
       );
       pag--;
       offset = urlParams.get("offset");
@@ -130,7 +130,7 @@ const createCard = (p) => {
     .replace("https://pokeapi.co/api/v2/pokemon/", "")
     .replace("/", "");
 
-  return `<div  class="card" style="width: 13rem; margin: 10px">
+  return `<div  class="card col-sm-12">
   <img loading=lazy id="img-${id}" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png" class="card-img-top" alt="${name}">
   <div class="card-body">
     <h5 class="card-title">${name}</h5>
@@ -156,6 +156,36 @@ const addTodosToDOM = (all) => {
 };
 
 const form = document.querySelector("form#form-buscar");
+const busca = document.querySelector("form#busca_nome");
+
+const buscar = busca.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const tmp = document.querySelector("#entrada_nome").value;
+  if (tmp) {
+    console.log(tmp);
+    let link = `${BASE_URL}/pokemon/${tmp}`;
+    try {
+      const res = await axios.get(link);
+      setLink(link);
+      console.log(tmp, link, res);
+      retorno_buscar(res);
+      $(".page-navigation-pokemon").hide();
+      $(".tipos-pokemons").hide();
+    } catch (error) {
+      alert("Pokemon " + tmp + " não encontrado");
+    }
+  } else {
+    alert("O campo está vazio");
+  }
+});
+
+const retorno_buscar = (res) => {
+  let nome_pokemon = res.data;
+  let url = "https://pokeapi.co/api/v2/pokemon/" + nome_pokemon.id;
+  nome_pokemon.url = url;
+  addTodosToDOM({ results: nome_pokemon });
+  console.log(nome_pokemon);
+};
 
 const formEvent = form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -183,7 +213,7 @@ const listByType = async (t) => {
 
     addTodosToDOM(tmp);
     $(".tipos-pokemons").text(
-      `Total de ${tmp.results.length} | Tipo: ${t}`.toUpperCase()
+      `Total de ${tmp.results.length} | Tipo: ${t}`.toUpperCase(),
     );
     setLink(link);
   } else {
