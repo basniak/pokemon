@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "deploy": "firebase deploy"
   },
   "keywords": [],
   "author": "",
